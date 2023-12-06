@@ -1,0 +1,389 @@
+nav {
+    position: fixed;
+    z-index: 100000;
+    width: 100%;
+    padding: 37px 0;
+    transition: 0.2s all ease-in-out;
+
+    @include media-breakpoint-down(sm) {
+        padding: 22px 0;
+    }
+
+    &.scrolled {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        background: rgba(12, 12, 12, 0.51);
+        backdrop-filter: blur(22.5px);
+        padding: 16px 0;
+    }
+
+    .navPhonebutton {
+        font-size: 24px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 12px !important;
+        }
+    }
+}
+
+section.slideMenu {
+    background-color: $black;
+    color: $white;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000000000;
+    transform: translateX(0);
+    transform: translateX(-100%);
+    transition: 0.3s all ease;
+
+    &.active {
+        transform: translateX(0);
+    }
+}
+
+.homepageBannerWrapper {
+    section.banner {
+        background: imgUrl('waves.png') $black;
+        background-size: cover;
+        padding-top: 265px;
+        border-radius: 0 0 100px 100px;
+        overflow: hidden;
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 100px;
+        }
+
+        .banner-loans-slider {
+            .slick-slide {
+                margin: 0 6px;
+            }
+        }
+    }
+
+    .circular-button {
+        margin-top: -146px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 292px;
+        height: 292px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 5px solid #AAA;
+        background: rgba(12, 12, 12, 0.51);
+        backdrop-filter: blur(22.5px);
+        position: relative;
+
+        @include media-breakpoint-down(sm) {
+            width: 238px;
+            height: 238px;
+            margin-top: -119px;
+
+            .applyNow {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+.menu-loans-container {
+    .nav-item {
+        a.nav-link:hover {
+            background: rgba(207, 205, 205, 0.51);
+            transition: 0.2s all;
+        }
+
+        &.secondary a.nav-link {
+            border: 0 !important;
+            background: $secondary;
+
+            &:hover {
+                background: rgba(123, 238, 108, 0.51);
+            }
+        }
+    }
+}
+
+.commonBannerWrapper {
+    section.banner {
+        background: imgUrl('waves.png') $black;
+        background-size: cover;
+        padding-top: 265px;
+        border-radius: 0 0 100px 100px;
+
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 0;
+            padding-bottom: 105px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 100px;
+        }
+
+        .banner-loans-slider {
+            .slick-slide {
+                margin: 0 6px;
+            }
+        }
+
+        .bannerHeading {
+            font-size: 70px;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 64px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+section.part-lenders {
+    border-radius: 40px 0 0 40px;
+}
+
+.partner-slider {
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-slide {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include media-breakpoint-down(sm) {
+            margin: 0 16px;
+        }
+    }
+}
+
+section.part-solution {
+    #support_slider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            height: inherit;
+            margin: 0 6px;
+        }
+    }
+
+    .folder {
+        width: 100%;
+        text-align: center;
+        border-radius: 25px;
+        position: relative;
+        padding: 72px 36px 24px;
+        height: 100%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            background: imgUrl('subtract.png');
+            height: 62px;
+            width: 212px;
+            top: 0;
+            left: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 72px 16px 24px;
+        }
+    }
+}
+
+section.part-loanCards {
+    border-radius: 65px;
+    padding: 93px 0;
+    background: $black;
+
+    .loanCards_slider {
+        .slick-arrow {
+            z-index: 100;
+            width: 50px;
+            height: 50px;
+
+            @include media-breakpoint-down(sm) {
+                width: 20px;
+                height: 20px;
+            }
+
+            &::before {
+                font-size: 50px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .slick-prev {
+            left: 25px;
+        }
+
+        .slick-next {
+            right: 25px;
+        }
+
+        .slick-slide {
+            transition: 0.2s all;
+            transform: scale(0.9);
+            filter: grayscale(1);
+
+            &.slick-current.slick-active {
+                transform: scale(1);
+                filter: grayscale(0);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        border-radius: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        height: 516px;
+        padding: 51px 0;
+    }
+}
+
+section.part-video {
+    background: $light;
+
+    .videoWrapper {
+        border-radius: 65px;
+        padding: 55px 88px;
+        background: $light-grey imgUrl('loans.jpg') right center;
+        background-size: cover;
+
+        @include media-breakpoint-down(xl) {
+            padding: 55px 24px;
+            background-position: center center;
+        }
+
+        @include media-breakpoint-down(lg) {
+            border-radius: 40px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 29px 16px;
+        }
+
+        .heroImage {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .playBtn {
+            height: 138px;
+            width: 138px;
+            border: 5px solid #AAA;
+            background: rgba(12, 12, 12, 0.51);
+            backdrop-filter: blur(22.5px);
+
+            @include media-breakpoint-down(sm) {
+                height: 90px;
+                width: 90px;
+            }
+        }
+    }
+}
+
+section.part-why-us {
+    background: linear-gradient(180deg, $light, transparent);
+
+    #why_us_slider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            margin: 0 6px;
+            height: inherit;
+        }
+    }
+
+    .whyUsCard {
+        padding: 36px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 24px;
+        }
+
+        .heroImage {
+            height: 264px;
+
+            img {
+                object-position: center;
+            }
+        }
+
+        .card-heading {
+            font-size: 32px;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 20px;
+            }
+        }
+
+        .applyBtn {
+            height: 80px;
+            width: 80px;
+            padding: 6px;
+
+            .arrow {
+                position: absolute;
+                right: 46%;
+            }
+        }
+    }
+}
+
+.applyNow {
+    position: absolute;
+    animation: rotateAnimation 15s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
+
+footer {
+    background: imgUrl('union-mammoth-black.png') left bottom $black;
+    background-size: contain;
+    border-radius: 100px 100px 0 0;
+
+    @include media-breakpoint-down(lg) {
+        border-radius: 65px 65px 0 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        border-radius: 40px 40px 0 0;
+        background: $black;
+    }
+}

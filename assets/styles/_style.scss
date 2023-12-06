@@ -1,0 +1,302 @@
+main.homepage {
+    section.about {
+        background: imgUrl('union-mammoth.png') left bottom;
+    }
+}
+
+main.aboutPage,
+main.homeLoansPage,
+main.assetLoansPage {
+    section.introduction {
+        .image {
+            border-radius: 63px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+
+            @include media-breakpoint-down(sm) {
+                border-radius: 39px;
+            }
+
+            img.hero {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+main.commercialLoansPage {
+    section.introduction {
+        background: imgUrl('union-mammoth.png') left bottom;
+        background-size: contain;
+    }
+
+    section.about, section.introduction {
+        .image {
+            border-radius: 63px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+
+            img.hero {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+main.businessLoansPage {
+    #business_loan_slider {
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-slide {
+            margin: 2px 6px;
+            height: inherit;
+        }
+    }
+
+    section.process {
+        .processCard {
+            padding: 108px 30px 34px;
+            height: 100%;
+
+            @include media-breakpoint-down(sm) {
+                padding: 80px 24px 24px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                background: imgUrl('subtract.png');
+                height: 62px;
+                width: 212px;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    section.about {
+        padding: 208px 0 100px;
+
+        @include media-breakpoint-down(lg) {
+            padding: 92px 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 64px 0;
+        }
+
+        .mammothImage {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            @include media-breakpoint-down(xl) {
+                display: none;
+            }
+        }
+    }
+}
+
+main.homeLoansPage {
+    section.loanTypes {
+        border-radius: 65px;
+        padding: 93px 0;
+        background: $black;
+    }
+}
+
+main.contactUsPage {
+    section.introduction {
+        .form {
+            label {
+                font-family: $font-padaloma;
+                font-size: 0.875rem;
+                margin-bottom: 14px;
+            }
+
+            .form-control {
+                border: 1px solid #e3e3e3;
+                border-radius: 0;
+                font-size: 14px;
+
+                &::placeholder {
+                    color: #A0A0AB;
+                }
+            }
+
+            input,
+            select {
+                height: 60px;
+            }
+
+            button[type=submit] {
+                border-radius: 100px;
+                background-color: $secondary;
+                height: 62px;
+                color: $black;
+                text-transform: uppercase;
+                font-family: $font-padaloma;
+                width: 100%;
+            }
+        }
+    }
+}
+
+main.onlineApplicationPage {
+    section.form {
+        padding: 52px 0 124px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 52px 0;
+        }
+
+        label {
+            font-family: $font-padaloma;
+            font-size: 0.875rem;
+            margin-bottom: 14px;
+        }
+
+        .form-control {
+            border: 1px solid #e3e3e3;
+            border-radius: 0;
+            font-size: 14px;
+
+            &::placeholder {
+                color: #A0A0AB;
+            }
+        }
+
+        input,
+        select {
+            height: 60px;
+        }
+
+        button[type=submit] {
+            border-radius: 100px;
+            background-color: $secondary;
+            height: 62px;
+            color: $black;
+            text-transform: uppercase;
+            font-family: $font-padaloma;
+            width: 100%;
+        }
+
+        .custom-radio {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            .wpcf7-list-item {
+                margin: 0;
+            }
+
+            .wpcf7-list-item-label {
+                display: inline-block;
+                font-size: 16px;
+                border: 1px solid $primary;
+                background: $white;
+                border-radius: 60px;
+                height: 64px;
+                padding: 6px 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                font-size: 18px;
+                cursor: pointer;
+
+                @include media-breakpoint-down(sm) {
+                    height: 32px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .custom-radio input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .custom-radio input[type="radio"]:checked+.wpcf7-list-item-label {
+            background-color: $secondary;
+        }
+
+        .codedropz-upload-wrapper {
+            .codedropz-upload-handler {
+                border: 1px solid #e3e3e3;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+main.blogsPage {
+    section.blogs {
+        background: $black;
+        padding: 160px 0;
+        border-radius: 103px;
+
+        @include media-breakpoint-down(xl) {
+            border-radius: 60px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            border-radius: 40px;
+            padding: 80px 0;
+        }
+
+        .blogCard {
+            background: $white;
+            border-radius: 40px;
+            padding: 36px 31px 64px;
+            height: 100%;
+
+            .heroImage {
+                border-radius: 30px;
+                background-color: $light;
+                height: 264px;
+                overflow: hidden;
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+main.blogPost {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 800;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
+}
